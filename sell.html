@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+
+        <title> Sell your item! </title>
+
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <!-- google fonts should come here -->
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:wght@300;400;500;700&display=swap"
+              rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Esteban&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+
+
+        <!-- FONT AWESOME - ATUL'S ACCNT (DON'T USE ANYWHERE ELSE) -->
+        <script src="https://kit.fontawesome.com/39286e5c01.js" crossorigin="anonymous"></script>
+
+
+        <!-- CSS file -->
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/navbar-footer.css">
+
+    </head>
+
+    <body>
+        <!-- NAVBAR -->
+        <script src="navbar.js"></script>
+        <!-- NAVBAR -->
+
+        <div class="sell-intro">
+            <h1>Sell your dish!</h1>
+            <p>Want to make your dish available to people without worrying about delivery, payment, packing?<br>Don't worry, we've got you.</p>
+        </div>
+
+        <div class="sell-form-div">
+            <form class="sell-form">
+                <div class="item-info-section form-group">
+                    <h1>Item Details <i class="fas fa-cookie"></i></h1>
+                    <p>Details about your item that will be displayed when a customer clicks on your item</p>
+                    <label for="sell-item-name">Item Name</label>
+                    <input required type="text" class="form-control" id="sell-item-name" placeholder="Eg: Pretty Little Pancakes">
+                    <br>
+
+                    <label for="sell-item-description">Short Item Description</label>
+                    <textarea type="text" class="form-control" id="sell-item-description" placeholder="Write a few lines about your item"></textarea>
+
+                    <br>
+                    <label for="sell-item-type">What type of item is it?</label>
+                    <select class="form-control" id="sell-item-type">
+                        <option>Desert</option>
+                        <option>Pancake</option>
+                        <option>Cake</option>
+                        <option>Pastry</option>
+                        <option>Donuts</option>
+                        <option>Bread Delicacy</option>
+                    </select>
+
+
+                    <br>
+                    <label for="sell-item-price">What price do you want to give it?</label>
+                    <input required type="number" class="form-control" id="sell-item-price" min="0" placeholder="Rs. 0">
+
+                    <br>
+                    <label for="sell-item-image">Upload a nice little image of your dish</label>
+                    <br>
+                    <input required id="sell-item-image" type="file" accept="image/*">
+                </div>
+
+                <br><br>
+
+                <hr />
+
+                <div class="seller-contact-section form-group">
+                    <h1>Seller Details <i class="fas fa-user"></i></h1>
+                    <p>We need some user details that will help us identify you and also allow us to facilitate delivery of your dishes to the customers</p> 
+
+                    <label >Enter your name</label>
+                    <div class="form-row">
+                        <div class="col">
+                            <input required type="text" class="form-control" placeholder="First name">
+                        </div>
+                        <div class="col">
+                            <input required type="text" class="form-control" placeholder="Last name">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="sell-user-email">Email</label>
+                            <input required type="email" class="form-control" id="sell-user-email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="sell-user-address">Address</label>
+                            <textarea type="text" class="form-control" id="sell-user-address" placeholder="Casa Grande XS, Royapur street"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="sell-user-city">City</label>
+                            <input required type="text" class="form-control" id="sell-user-city">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="sell-user-state">State</label>
+                            <select id="sell-user-state" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Tamil Nadu</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="sell-user-zip">Zip</label>
+                            <input required type="text" class="form-control" id="sell-user-zip">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="sell-user-number">Contact Number</label>
+                            <input required type="tel" class="form-control" id="sell-user-number" placeholder="xx-xxxx-xx-xxxx">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+                <hr />
+
+                <div class="seller-payment-section form-group">
+                    <h1>Payment Details <i class="fas fa-money-check-alt"></i></h1>
+                    <p>We need some bank details of your account so that we could directly transfer the customer funds to your account directly on receival of money</p>
+
+
+                    <label for="sell-user-bankname">Bank Name</label>
+                    <select id="sell-user-bankname" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>HDFC</option>
+                        <option>SBI</option>
+                        <option>AXIS</option>
+                    </select>
+                    <br>
+                    <label for="sell-bank-account-number">Bank Account Number</label>
+                    <input required type="text" inputmode="numberic"  class="form-control" id="sell-bank-account-number">
+                </div>
+                <br>
+                <br>
+                <div class="text-center">
+                <button type="submit" class="btn btn-outline-success btn-lg">Sell your dish</button>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+        <!-- Footer -->
+        <script src="footer.js" charset="utf-8"></script>
+        <!-- Footer -->
+    </body>
+</html>

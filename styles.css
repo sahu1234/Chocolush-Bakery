@@ -1,0 +1,696 @@
+/*
+Palette
+#7d4f50 --> main BG-colour
+#6d4546 --> CURRENT main BG-colour  - doing this so that the image brown color blends in with the main BG color
+#6e4546 --> darker shade of BG
+#fff3f3 --> header/footer
+#ff1654 --> pink-ish
+#fff07c --> yellow-tagline
+
+I might change the colour palette >_< 
+~Anisha 
+ */
+:root{
+    --bgMain :  #6d4546;
+    --bgMain-dark: #6e4546;
+    --sub-bg: #fff3f3;
+
+    --subText-pink: #ff1654  ;
+    --subText-yellow: #fff07c;
+}
+
+/** CUSTON SCROLL BAR **/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:var(--bgMain);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--sub-bg);
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/** INDEX PAGE  **/
+*{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bgMain);
+    color: #ffffff;
+    font-family: 'Esteban';
+
+}
+label{
+    font-size: 24px;
+}
+#body-info{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin:0 0.75rem 0.75rem 0;
+}
+
+/* INDEX MODAL FORM */
+.modal-content{
+    background-color: var(--sub-bg);
+    color: var(--bgMain-dark);
+}
+.close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-btn{
+    font-size: 1.3em;
+    padding: 0.3em 3em;
+}
+
+form{
+    padding: 3em;
+}
+
+#form{
+    padding: 0.2em 2em 1em 2em;
+}
+
+.form-check{
+    padding-left: 3em;
+    margin-top: 0.7em;
+}
+
+.form-check label{
+    font-size: 16px;
+}
+
+.form-group{
+    padding: 0.75em;
+    margin: 0;
+    position: relative;
+}
+
+.form-group.success input{
+    border:2px solid #55a630;
+}
+
+.form-group.error input{
+    border: 2px solid #d90429;
+}
+
+.form-group i {
+    position: absolute;
+    top: 66px;
+    right: 20px;
+    visibility: hidden;
+}
+
+.form-group.success i.fa-check-circle{
+    visibility: visible;
+    color: #55a630;
+}
+
+.form-group.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: #d90429;
+}
+
+.form-group small{
+    visibility: hidden;
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+}
+
+.form-group.error small{
+    visibility: visible;
+    color: #d90429;
+}
+
+/** intro section **/
+
+#intro-section {
+    padding: 1rem 5rem 5rem 5rem;
+    background-image: url('../images/flower-bg.jpg');
+}
+
+
+#intro-section .row {
+    padding: 3rem 8rem 7rem 8rem;
+}
+
+
+.intro-para {
+    padding-right: 10rem;
+    padding-top: 5rem;
+}
+
+
+.intro-para h1 {
+    font-family: 'Esteban', cursive;
+    font-size: 4rem;
+}
+
+.intro-para p {
+    padding-bottom: 2rem;
+    font-size: 24px;
+}
+
+.intro-para .tagline{
+    font-family: 'Rouge Script';
+    /*color: #e4c1f9;*/
+    color: var(--subText-yellow);
+}
+
+
+/** intro section end **/
+
+
+/** section-2  **/
+
+
+#features-section .row{
+    padding: 4rem 8rem 7rem 8rem;
+
+}
+
+.features-para{
+    padding-top: 6rem;
+    padding-left: 5rem;
+    font-size: 1.5rem;
+}
+
+.features-para ul{
+    padding-bottom: 1rem;
+}
+#features-section li{
+    padding: 0.75rem;
+}
+
+.features-para .tagline{
+    color:var(--subText-yellow);
+    font-family: 'Rouge Script';
+    font-size: 2rem;
+    padding-bottom:0.5rem;
+}
+
+
+.scooter{
+    padding: 2rem 2rem;
+}
+#features-section i.fa-handshake, #features-section i.fa-cheese, #features-section i.fa-sign-in-alt{
+    color: var(--subText-yellow);
+}
+
+
+/** section-2 end **/
+
+
+/** adding float animations for svgs (experimental) **/
+.float {
+    -webkit-animation-name: Floating;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes Floating{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 50px);}
+    to {-webkit-transform: translate(0, -0px);    }
+}
+
+/** floating svg animation - end **/
+
+
+/** section-3  **/
+
+#section-3 {
+    padding-top: 4rem;
+    background-image: url('../images/flower.jpg');
+}
+
+.carousel {
+    height: 80%;
+}
+
+.carousel-inner {
+    padding: 10%;
+}
+
+.review {
+    font-family: 'Rouge Script';
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0 10rem 0;
+}
+
+
+/** section-3 end **/
+/** INDEX PAGE END **/
+
+/*-----------------------------------------------------------------------------------*/
+
+/** STORES PAGE **/
+
+/* CAROUSEL */
+#sales-carousel{
+    padding:0;
+}
+
+.parallax{
+    background-image: url('../images/wallbg-2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-1{
+    background-image: url('../images/store-bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sales-carousel .carousel-item{
+    width: 100%;
+    height: 500px;
+
+}
+
+#sales-carousel .carousel-item img{
+    border: 4px solid #6e4546;
+    border-radius: 10px;
+    max-height:100%;
+    margin: auto;
+    margin-left: 6em;
+    overflow:hidden;
+}
+#sales-carousel .carousel-item #ad2 img{
+    border: 4px solid #6e4546;
+    border-radius: 10px;
+    max-height:100%;
+    margin: auto;
+    margin-left: 9em;
+    overflow:hidden;
+}
+
+/*ITEMS CARDS*/
+#items-card{
+    background-image: url('../images/flower.jpg');
+    padding: 4em 0em 2em 0em;
+}
+
+/* Item Header */
+.item-card-header{
+    justify-content: center;
+    padding: 0 2rem 0;
+    margin: 2rem 0 2rem;
+}
+
+.item-card-header .heading{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.item-card-header .line1{
+    background-color: var(--sub-bg);
+    border: 1px transparent;
+    border-radius: 4px;
+    height: 0.3rem;
+    margin: auto;
+}
+
+.item-card-header .line2{
+    background-color: var(--sub-bg);
+    border: 1px transparent;
+    border-radius: 4px;
+    height: 0.3rem;
+    margin: auto;
+}
+
+/* Items Body */
+.item-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding: 4rem 1rem 2rem 4rem;
+    grid-gap: 4rem;
+}
+
+/* Each card */
+
+.card{
+    width: 18rem;
+    justify-content: center;
+    margin: 1em;
+    margin-left: 2em;
+    box-shadow: 4px 4px 11px -6px rgba(0,0,0,0.46);
+    transition: 0.5s;
+}
+
+.card:hover{
+    box-shadow:  0px 24px 28px 0px rgba(50, 50, 50, 0.79);
+}
+
+.card-img-top{
+    height: 20em;
+    width: 18em;
+}
+
+.card .card-body {
+    color: var(--bgMain);
+    /* border: 2px solid #000;*/
+}
+
+.card-text {
+    font-weight: 600;
+}
+
+.card a.btn{
+    width: 100%;
+}
+
+
+/* Item Footer */
+.item-card-footer{
+    margin: 0 auto 0;
+}
+
+.prev{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.next{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pages{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.number{
+    padding: 0.5em 1.7em 0.5em 1.7em;
+    margin: 0.7em;
+    background-color: #ffffff;
+    color: var(--bgMain-dark);
+    font-size: 18px;
+    font-weight: 600;
+    border: 0px transparent;
+    border-radius: 50px;
+} 
+
+.item-card-footer a.item-nav{
+    color: var(--subText-yellow);
+    transition: 0.3s;
+}
+
+.item-card-footer a.item-nav:hover{
+    color: #fff3f3;
+}
+
+/** ITEMS MODAL **/
+#items-modal {
+    display: none; /* Hidden by default */
+    align-items: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+.items-modal-content {
+    background-color: var(--sub-bg);
+    color: var(--bgMain-dark);
+    margin: auto;
+    padding: 1rem;
+    width: 60%;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    font-size: 1.5rem;
+    border: 0px transparent;
+    border-radius: 15px;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.items-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.items-modal-close:hover,
+.items-modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+/** SELL PAGE **/
+
+.sell-intro {
+    padding: 5% 15% 2%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.sell-form-div {
+    margin: 2rem 25% 3rem;
+    border-radius: 25px;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,0.9);
+    background-color: #FFF3F3;
+    color: black;
+}
+
+.sell-form .btn {
+    margin: auto;
+}
+
+/** SELL PAGE END **/
+
+/*-----------------------------------------------------------------------------------*/
+
+/* ABOUT US PAGE*/
+
+#about-us{
+    padding: 5rem;
+}
+
+#about-us .row {
+    padding: 3rem 3rem 7rem 3rem;
+    margin-bottom: auto;
+}
+
+.about-us-para{
+    padding:3rem;
+    font-size:1.4rem;
+}
+
+.circles{
+    padding:1rem;
+}
+
+.about-us-para .tagline{
+    color:var(--subText-yellow);
+    font-family: 'Rouge Script';
+    font-size: 6rem;
+    padding-bottom:0.5rem;
+}
+
+/*ABOUT US PAGE END*/
+/*-----------------------------------------------------------------------------------*/
+
+/** MEDIA QUERIES **/
+
+@media only screen and (max-width: 950px) {
+
+    #intro-section {
+        padding: 2rem;
+    }
+
+    #intro-section .row {
+        padding: 3rem 0 5rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: center;
+    }
+
+    .intro-para {
+        padding: 0;
+        padding-left: 1.5rem;
+    }
+
+    .intro-para h1 {
+        font-size: 2rem;
+    }
+
+    .intro-para p {
+        font-size: 1rem;
+        padding-bottom: 0;
+    }
+
+    #body-info {
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+        height: 2rem;
+        width: 5.75rem;
+    }
+
+    .intro-food {
+        padding: 4rem;
+    }
+
+    /* FEATURES SECTION */
+
+    #features-section .row {
+        padding: 2rem; 
+        margin: 0;
+    }
+
+    .features-para {
+        padding-top: 3rem;
+        padding-left: 2rem;
+        padding: 3rem 1rem 0;
+    }
+
+    #features-section li {
+        font-size: 1rem;
+    }
+
+    .scooter {
+        padding: 4rem;
+    }
+
+    /* SECTION 3 */
+    #section-3 {
+        padding: 0rem;
+    }
+
+    #review-carousel{
+        height: 90vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .review {
+        font-size: 1.5rem;
+        padding: 0 2rem 0;
+    }
+
+    /*-----------------------------------------------------------------------------------*/
+    /** SELL PAGE **/
+
+    .sell-intro {
+        padding: 5% 5% 2%;
+        font-size: 1.5rem;
+    }
+
+    .sell-form-div {
+        margin: 1rem 2% 1rem;
+    }
+
+    /**** SELL PAGE END ***/
+    /*-----------------------------------------------------------------------------------*/
+
+    /* ABOUT PAGE */
+    #about-us{
+        padding: 0;
+    }
+
+    #about-us .row {
+        padding: 3rem;
+        margin: 0;
+    }
+
+    .about-us-para{
+        padding:2rem;
+        font-size:1.4rem;
+    }
+
+    .circles{
+        padding: 5px;
+    }
+
+    .about-us-para .tagline{
+        color:var(--subText-yellow);
+        font-family: 'Rouge Script';
+        font-size: 3rem;
+        padding-bottom:0.5rem;
+    }
+    /* ABOUT PAGE END */
+}
+
+
+@media only screen and (min-width: 950px) and (max-width: 1200px) {  /** for 950px above and less than 1300px **/
+
+    /* INDEX PAGE */
+    /* INTRO SECTION */
+
+    .intro-para {
+        padding: 0;
+        padding-left: 1.5rem;
+    }
+
+    #intro-section .row {
+        margin: 0;
+        padding: 3rem 3rem 7rem;
+    }
+
+    #section-3 {
+        padding: 5rem 0 0 0;
+    }
+
+    /* INTRO SECTION END */
+
+    /** SELL PAGE **/
+
+    .sell-intro {
+        padding: 5% 7% 2%;
+        font-size: 1.5rem;
+    }
+
+    .sell-form-div {
+        margin: 1rem 5% 3rem;
+    }
+
+
+    /** SELL PAGE END **/
+}
+
+

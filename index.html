@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title> Chocolush </title>
+
+
+        <meta content="width=device-width, initial-scale=1" name="viewport" />  <!-- need to add this line as weare working with media queries -->
+
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <!-- google fonts should come here -->
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Esteban&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+
+
+        <!-- FONT AWESOME - ATUL'S ACCNT (DON'T USE ANYWHERE ELSE) -->
+        <script src="https://kit.fontawesome.com/39286e5c01.js" crossorigin="anonymous"></script>
+
+
+        <!-- CSS file -->
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/navbar-footer.css">
+
+    </head>
+
+    <body>
+        <!-- NAVBAR -->
+
+        <script src="navbar.js" charset="utf-8"></script>
+
+        <!-- NAVBAR -->
+
+        <section id="intro-section">
+            <div class="row">
+                <div class="col-md-7 intro-para">
+                    <h1 class="tagline"> 'Happiness is homemade' </h1>
+                    <br>
+                    <p>Pick up your wish and <br>Buy delicious confectionaries baked at home with warmth. ;)</p>
+
+                    <br>
+                    <button type="button" id="body-info" class="btn btn-lg btn-light" data-toggle="modal" data-target="#LoginModal">Visit Store</button> &nbsp; &nbsp;
+                    <button type="button" id="body-info" class="btn btn-lg btn-light" data-toggle="modal" data-target="#LoginModal"> &nbsp;Sell&nbsp; </button>
+
+                </div>
+                <img class="col-md-5 intro-food float" src="images/intro-food.svg" alt="food">
+            </div>
+        </section>
+
+        <!-- MODAL -->
+        <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                                            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="modalLabel">&nbsp; &nbsp;&nbsp;Welcome to Whisked</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <img src="images/modal-header.jpg">
+
+                        <!--<div class="error-login" id="error"></div>-->
+                        <form id="form" class="login-form" action="stores.html">
+                            <div class="form-group">
+                                <label for="InputEmail">Email address</label>
+                                <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="Enter E-mail Address">
+                                <i class="fas fa-check-circle fa-1x"></i>
+                                <i class="fas fa-exclamation-circle fa-1x"></i>
+                                <small id="error">"Error Message"</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="InputPassword">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                                <i class="fas fa-check-circle fa-1x"></i>
+                                <i class="fas fa-exclamation-circle fa-1x"></i>
+                                <small id="error">"Error Message"</small>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="check">
+                                <label class="form-check-label" for="Check">Forgot Password?</label>
+                            </div>
+                            <div class="form-group  d-flex justify-content-center">
+                                <button type="submit" class="btn btn-info modal-btn">Log In</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-around">
+                        <h4 class="sign-upr">or,&nbsp;&nbsp;&nbsp;&nbsp; First time at Wisked?</h4>
+                        <button type="button" class="btn btn-info modal-btn">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section id="features-section" class="parallax">
+
+            <div class ="row">
+
+                <img class="col-md-5 scooter float" src="images/scooter.svg" alt="delivery">
+
+                <div class="col-md-7 features-para rounded">
+                    <h1 class="tagline">Why Whisked?</h4>
+                    <ul class="list-unstyled list-inline">
+                        <li>
+                            <i class="fas fa-handshake fa-1x"></i>&nbsp;&nbsp;Got some delicious dessert baking in the oven, and want others to taste? Join our website as a seller.
+                        </li>
+                        <li>
+                            <i class="fas fa-cheese fa-1x"></i>&nbsp;&nbsp;Locate nearest bakery and get ready to dig into delicious confectionaries.
+                        </li>
+                        <li>
+                            <i class="fas fa-sign-in-alt fa-1x"></i></i>&nbsp;&nbsp;We make sure that your dessert reach your doorstep.
+                        </li>
+                    </ul>
+                    <!--<p class="one"><i class="far fa-handshake fa-2x"></i>Got some delicious dessert baking in the oven, and want others to taste? Join our website as seller.</p>
+                        <br>
+                        <p class="two">Locate nearest bakery and get ready to dig into delicious confectionaries.</p>
+                        <br>
+                        <p class="three">We make sure that your dessert reach your doorstep.</p>
+                        <br>-->
+                        &nbsp; &nbsp;
+
+                        <a href="about.html" id="body-info"  class="btn btn-lg btn-light">Learn More</a> &nbsp; &nbsp;
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="section-3"> 
+
+            <div id="review-carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#review-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#review-carousel" data-slide-to="1"></li>
+                    <li data-target="#review-carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item text-center active">
+                        <p class="review">"I'm a regular customer. The people in here aren't business minded. They are here to make others taste their wonderful delicacies prepared with love. And that's what makes Whisked so good."</p>
+                        <p class="user">-Kylie Jenner</p>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <p class="review">"A wonderful platform for everyone who wish they could reach out with their delicacies."</p>
+                        <p class="user">-Adolf Hitler</p>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <p class="review">"I'm in love with Whisked. I get to order tasty homemade cakes, and also sell some of my own recipes."</p>
+                        <p class="user">-Anonymous</p>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#review-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#review-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
+
+
+        <!-- Footer -->
+        <script src="footer.js" charset="utf-8"></script>
+        <!-- Footer -->
+
+
+        <script src="index.js" charset="utf-8"></script>
+    </body>
+</html>
